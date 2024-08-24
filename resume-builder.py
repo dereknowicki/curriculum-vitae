@@ -3,12 +3,19 @@
 
 import sys
 import argparse
+import os.path
+
+def is_valid_file(parser, path):
+     if not os.path.exists(path):
+          parser.error("file not found %s", path)
+     else:
+          return open(path, 'r')
 
 def main():
      print("hello resume builder")
      parser = argparse.ArgumentParser()
-     parser.add_argument('filename', help='file location of main.md')
-     parser.add_argument('keys', help='file location of keyword source text')
+     parser.add_argument('filename', help='file location of main.md', type=lambda x: is_valid_file(parser, x))
+     parser.add_argument('keys', help='file location of keyword source text', type=lambda x: is_valid_file(parser, x))
      args = parser.parse_args()
 
 
