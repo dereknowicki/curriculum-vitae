@@ -5,6 +5,7 @@ import sys
 import argparse
 import os.path
 import markdown
+import yake
 
 def is_valid_file(parser, path):
      if not os.path.exists(path):
@@ -13,7 +14,8 @@ def is_valid_file(parser, path):
           return open(path, 'r')
 
 def harvest_keywords(keys_str):
-     return keys_str
+     extractor = yake.KeywordExtractor(n=1)
+     return extractor.extract_keywords(keys_str)
 
 def build_resume(resume_text, keywords):
      print("building resume")
@@ -30,8 +32,6 @@ def main():
 
      keywords = harvest_keywords(args.keys.read())
      html_resume = build_resume(args.filename.read(), keywords)
-#     print(html_resume)
-
 
 if __name__ == '__main__':
      sys.exit(main())
