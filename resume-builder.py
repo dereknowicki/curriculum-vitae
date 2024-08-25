@@ -18,6 +18,9 @@ def main():
      parser.add_argument('keys', help='file location of keyword source text', type=lambda x: is_valid_file(parser, x))
      args = parser.parse_args()
 
+     print(args.filename.read())
+     print(args.keys.read())
+
 
 if __name__ == '__main__':
      sys.exit(main())
