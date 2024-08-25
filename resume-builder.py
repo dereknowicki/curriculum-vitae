@@ -13,6 +13,9 @@ def is_valid_file(parser, path):
      else:
           return open(path, 'r')
 
+     with open("../resume.html", "w", encoding="utf-8", errors="xmlcharrefreplace") as output_file:
+          output_file.write(html_resume)
+
 def harvest_keywords(keys_str):
      extractor = yake.KeywordExtractor(n=1)
      return extractor.extract_keywords(keys_str)
@@ -33,8 +36,6 @@ def main():
      keywords = harvest_keywords(args.keys.read())
      html_resume = build_resume(args.filename.read(), keywords)
 
-     with open("../resume.html", "w", encoding="utf-8", errors="xmlcharrefreplace") as output_file:
-          output_file.write(html_resume)
 
 if __name__ == '__main__':
      sys.exit(main())
