@@ -33,5 +33,8 @@ def main():
      keywords = harvest_keywords(args.keys.read())
      html_resume = build_resume(args.filename.read(), keywords)
 
+     with open("../resume.html", "w", encoding="utf-8", errors="xmlcharrefreplace") as output_file:
+          output_file.write(html_resume)
+
 if __name__ == '__main__':
      sys.exit(main())
