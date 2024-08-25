@@ -4,12 +4,22 @@
 import sys
 import argparse
 import os.path
+import markdown
 
 def is_valid_file(parser, path):
      if not os.path.exists(path):
           parser.error("file not found %s", path)
      else:
           return open(path, 'r')
+
+def harvest_keywords(keys_str):
+     return keys_str
+
+def build_resume(resume_text, keywords):
+     print("building resume")
+#     print(resume_text)
+     print(keywords)
+     return markdown.markdown(resume_text)
 
 def main():
      print("hello resume builder")
@@ -18,8 +28,9 @@ def main():
      parser.add_argument('keys', help='file location of keyword source text', type=lambda x: is_valid_file(parser, x))
      args = parser.parse_args()
 
-     print(args.filename.read())
-     print(args.keys.read())
+     keywords = harvest_keywords(args.keys.read())
+     html_resume = build_resume(args.filename.read(), keywords)
+#     print(html_resume)
 
 
 if __name__ == '__main__':
