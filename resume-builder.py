@@ -41,16 +41,16 @@ def build_resume(resume_text, keywords):
      return job_description_includes(resume_html) #include job descriptions from linked markdown files list
 
 def main():
-     print("hello resume builder")
-     parser = argparse.ArgumentParser()
-     parser.add_argument('filename', help='file location of main.md', type=lambda x: is_valid_file(parser, x))
-     parser.add_argument('keys', help='file location of keyword source text', type=lambda x: is_valid_file(parser, x))
-     args = parser.parse_args()
-
      keywords = harvest_keywords(args.keys.read())
      html_resume = build_resume(args.filename.read(), keywords)
 
      export_to_html(str(html_resume))
 
 if __name__ == '__main__':
+     print("hello resume builder")
+     parser = argparse.ArgumentParser()
+     parser.add_argument('filename', help='file location of main.md', type=lambda x: is_valid_file(parser, x))
+     parser.add_argument('keys', help='file location of keyword source text', type=lambda x: is_valid_file(parser, x))
+     args = parser.parse_args()
+
      sys.exit(main())
