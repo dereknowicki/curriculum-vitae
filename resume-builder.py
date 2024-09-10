@@ -31,7 +31,7 @@ def job_description_includes(html):
               print("nope")
               return html
           with open(f".{tag['href']}", 'r') as md_file:
-              html_dom.append(BeautifulSoup(markdown.markdown(md_file.read()), 'html.parser'))
+              html_dom.find('h1').append(BeautifulSoup(markdown.markdown(md_file.read()), 'html.parser'))
           tag.parent.decompose() #delete tag and its parent 
     # print(html_dom.prettify())
      return html_dom
