@@ -49,8 +49,12 @@ def score_resume(bs_html, keywords):
                if content.find(key[0]) > -1:
                    print(f"{key[0]} found. adding {key[1]} to score")
                    score += key[1]
-          print(f"final score -> {score}")
-                   
+          if args.a is not None:
+              ann = bs_html.new_tag('span')
+              ann.string = f"^^^final score: {score}"
+              ann['style'] = 'color:red;font-weight: bold'
+              tag.insert_after(ann)
+              print(f"final score {score}")
      return bs_html
 
 def main():
@@ -67,6 +71,8 @@ if __name__ == '__main__':
      parser = argparse.ArgumentParser()
      parser.add_argument('filename', help='file location of main.md', type=lambda x: is_valid_file(parser, x))
      parser.add_argument('keys', help='file location of keyword source text', type=lambda x: is_valid_file(parser, x))
+     parser.add_argument('-a', help='export resume with annotations', nargs='?', const=False)
      args = parser.parse_args()
+     print(args.a)
 
      sys.exit(main())
