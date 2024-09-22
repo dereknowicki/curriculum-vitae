@@ -14,8 +14,8 @@ def is_valid_file(parser, path):
      else:
           return open(path, 'r')
 
-def export_to_html(html_str):
-     with open("../resume.html", "w", encoding="utf-8", errors="xmlcharrefreplace") as output_file:
+def export_to_html(html_str, filename):
+     with open(f"../{filename}.html", "w", encoding="utf-8", errors="xmlcharrefreplace") as output_file:
           output_file.write(html_str)
 
 def harvest_keywords(keys_str):
@@ -47,15 +47,27 @@ def score_resume(bs_html, keywords):
           for key in keywords:
                #print(f"searching for {key[0]} in:\n\t {content}")
                if content.find(key[0]) > -1:
-                   print(f"{key[0]} found. adding {key[1]} to score")
+                  # print(f"{key[0]} found. adding {key[1]} to score")
                    score += key[1]
           if args.a is not None:
               ann = bs_html.new_tag('span')
               ann.string = f"^^^final score: {score}"
               ann['style'] = 'color:red;font-weight: bold'
               tag.insert_after(ann)
-              print(f"final score {score}")
+              #print(f"final score {score}")
      return bs_html
+
+def export_linkedin(bs_html):
+     print("exporting linkedin text")
+     export_to_html(str(bs_html), "linkedin")
+
+def export_indeed(bs_html):
+     print("exporting indeed text")
+     export_to_html(str(bs_html), "indeed")
+
+def export_glassdoor(bs_html):
+     print("exporting glassdoor text")
+     export_to_html(str(bs_html), "glassdoor")
 
 def main():
      keywords = harvest_keywords(args.keys.read())
@@ -64,7 +76,16 @@ def main():
      #score each p and li based on keyword matching
      score_resume(html_resume, keywords)
 
-     export_to_html(str(html_resume))
+     export_to_html(str(html_resume), "resume_full")
+
+     if args.L is not None:
+         export_linkedin(html_resume)
+
+     if args.I is not None:
+         export_indeed(html_resume)
+     
+     if args.G is not None:
+         export_glassdoor(html_resume)
 
 if __name__ == '__main__':
      print("hello resume builder")
@@ -72,6 +93,9 @@ if __name__ == '__main__':
      parser.add_argument('filename', help='file location of main.md', type=lambda x: is_valid_file(parser, x))
      parser.add_argument('keys', help='file location of keyword source text', type=lambda x: is_valid_file(parser, x))
      parser.add_argument('-a', help='export resume with annotations', nargs='?', const=False)
+     parser.add_argument('-L', help='export linkedin sections', nargs='?', const=False)
+     parser.add_argument('-I', help='export Indeed profile text', nargs='?', const=False)
+     parser.add_argument('-G', help='export Glassdoor profile text', nargs='?', const=False)
      args = parser.parse_args()
      print(args.a)
 
