@@ -38,7 +38,8 @@ def job_description_includes(html):
 
 def build_resume(resume_text, keywords):
      resume_html = markdown.markdown(resume_text)
-     return job_description_includes(resume_html) #include job descriptions from linked markdown files list
+     resume_html = job_description_includes(resume_html) #include job descriptions from linked markdown files list
+     return resume_html
 
 def score_resume(bs_html, keywords):
      for tag in bs_html.find_all(['p', 'li']):
@@ -69,6 +70,10 @@ def export_glassdoor(bs_html):
      print("exporting glassdoor text")
      export_to_html(str(bs_html), "glassdoor")
 
+def export_pretty_resume(bs_html):
+     print("exporting pretty human readable resume")
+     export_to_html(str(bs_html), "pretty")
+
 def main():
      keywords = harvest_keywords(args.keys.read())
      html_resume = build_resume(args.filename.read(), keywords)
@@ -86,6 +91,9 @@ def main():
      
      if args.G is not None:
          export_glassdoor(html_resume)
+     
+     if args.P is not None:
+         export_pretty_resume(html_resume)
 
 if __name__ == '__main__':
      print("hello resume builder")
@@ -96,7 +104,8 @@ if __name__ == '__main__':
      parser.add_argument('-L', help='export linkedin sections', nargs='?', const=False)
      parser.add_argument('-I', help='export Indeed profile text', nargs='?', const=False)
      parser.add_argument('-G', help='export Glassdoor profile text', nargs='?', const=False)
+     parser.add_argument('-P', help='export pretty resume for humans', nargs='?', const=False)
      args = parser.parse_args()
-     print(args.a)
+     #print(args.a)
 
      sys.exit(main())
