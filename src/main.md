@@ -1,4 +1,21 @@
-# Professional Experience
+#Headline
+Technical Generalist
+
+Computer Scientist
+
+Software Engineer
+
+#About
+My philosophy is that what you know is not nearly as important as what you can figure out; that quality of work and integrity are priority one. My talents have always seemed to point to generalist over specialist. From my high school A/V club, to Navy Interior Communications Electrician, to Energy Management systems programmer, I was always the guy they called on for the jobs no one knew how to do. Now my focus is on leveraging that talent as a developer and consultant to deliver creative and effective solutions to technology problems. To guide a company from idea to product launch by doing the research and choosing the best technology, people, and methods to fill their specific needs and goals.
+
+#Objective
+Technical generalist with a vast range of experience in electrical, communication, electromechanical, automation, and computing technologies. I started my career with analog Audio/Visual equipment and CCTV systems and expanded to analog control and monitoring equipment when I served in the US Navy. After the Navy I expanded yet again into Direct Digital Controls and found a passion for programming. I have a deep understanding of writing applications that process sensor data and generate actuator signals.
+
+#Summary of skills
+* Linux
+* MacOS
+
+#Professional Experience
 [Millennium Space Systems](./resume/src/job_descriptions/millennium.md)
 
 [Manley Laboratories](./resume/src/job_descriptions/manley.md)
@@ -13,14 +30,14 @@
 
 [Navy](./resume/src/job_descriptions/navy.md)
 
+#Volunteering
 [Southern California Linux Expo - Mobile App](./resume/src/job_descriptions/scale_app.md)
 
 [Southern California Linux Expo - A/V Team](./resume/src/job_descriptions/scale_av.md)
 
 [Girls Who Code](./resume/src/job_descriptions/girls_who_code.md)
 
-# Education
-
+#Education
 Computer Science, Bachelor's degree (2022), California State Polytechnic University, Pomona, CA
 
 National Science Foundation iCorp (2021), California State Polytechnic University, Pomona, CA
@@ -47,5 +64,5 @@ AN/WSN-2 Inertial Navigation Set Technician (2000), United States Navy, Great La
 
 Interior Communications Electrician “A” School (2000), United States Navy, Great Lakes, Illinois
 
-High School Diploma (1999), Franklin High School, Livonia, MI
+<!--High School Diploma (1999), Franklin High School, Livonia, MI-->
 
