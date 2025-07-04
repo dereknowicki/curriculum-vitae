@@ -1,0 +1,7 @@
+// tag::embedded_systems_engineer[]
+I have a vast range of experience in communication, electromechanical, automation, and computing technologies that would be valuable for the Embedded Systems Engineer position. I want to apply my unique experience to find innovative solutions for your team.
+// end::embedded_systems_engineer[]
+
+// tag::software_engineer[]
+I have a vast range of experience in communication, electro-mechanical, automation, and computing technologies that would be valuable for your open Software Engineer position. I want to apply my unique experience to find innovative solutions for your team.
+// end::software_engineer[]
