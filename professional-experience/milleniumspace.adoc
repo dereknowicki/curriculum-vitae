@@ -1,0 +1,7 @@
+Contributed to flight control software for small space vehicles.
+
+* C++ programming for linux based embedded systems
+* Developed a search application for the space vehicle flight computer that reduces telemetry download by up to 90%.
+* Collaborated with both flight and ground software teams to identify requirements and implement feedback
+* Unit test development with Catch 2 framework
+* Applied performance tools (gdb) for search algorithm analysis.
