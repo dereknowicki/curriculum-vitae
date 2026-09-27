@@ -88,10 +88,10 @@ def main():
 
      if args.I is not None:
          export_indeed(html_resume)
-     
+
      if args.G is not None:
          export_glassdoor(html_resume)
-     
+
      if args.P is not None:
          export_pretty_resume(html_resume)
 
