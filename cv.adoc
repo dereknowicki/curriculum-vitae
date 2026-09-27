@@ -1,0 +1,7 @@
+= Derek Nowicki =
+ifdef::addr[{addr}]
+ifdef::phone[{phone}]
+
+= Curriculum Vitae
+
+include::summary.adoc[tag={cv}]
