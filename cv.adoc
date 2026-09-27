@@ -1,27 +1,43 @@
-= Derek Nowicki =
+include::attributes.adoc[]
+ifdef::secrets[]
+include::{secrets}[]
+endif::[]
+
+:position: cv
+
+Derek Nowicki
 ifdef::addr[{addr}]
 ifdef::phone[{phone}]
 
-= Curriculum Vitae
+== Curriculum Vitae ==
 
-include::summary.adoc[tag={cv}]
+include::summary.adoc[tag={position}]
 
-== Education ==
-include::education/1999-06-hs-disploma.txt[]
+=== Education ===
+include::education/1999-06-hs-diploma.txt[]
 
 include::education/2017-06-pcc-cs.txt[]
 
 include::education/2017-09-cal-poly.txt[]
 
-== Certifications ==
+=== Certifications ===
 
 include::certifications/2000-07-navy-interior-comm-elect.txt[]
+
 include::certifications/2000-08-navy-an-wsn-2-tech.txt[]
+
 include::certifications/2000-09-navy-an-wsn-5-tech.txt[]
+
 include::certifications/2003-11-navy-basic-shipboard-elect-equip.txt[]
+
 include::certifications/2003-11-navy-tagout-training.txt[]
+
 include::certifications/2004-02-navy-tvdts-tech-cert.txt[]
+
 include::certifications/2004-04-navy-an-wsn-7.txt[]
+
 include::certifications/2005-08-navy-esomms-training.txt[]
+
 include::certifications/2005-09-navy-wc-sup-training.txt[]
+
 include::certifications/2008-12-niagra-ax-cert.txt[]
