@@ -1,21 +1,35 @@
-#Headline
+#Professsional Info
+* Technical Generalist
+* Computer Scientist
+* Software Engineer
+
+"its not what you know"
+"what you know is not nearly as important as what you can figure out"
+
+#Headline (max 220 char)
 Technical Generalist
 
 Computer Scientist
 
 Software Engineer
 
-#About
+#About (max 2600 char)
 My philosophy is that what you know is not nearly as important as what you can figure out; that quality of work and integrity are priority one. My talents have always seemed to point to generalist over specialist. From my high school A/V club, to Navy Interior Communications Electrician, to Energy Management systems programmer, I was always the guy they called on for the jobs no one knew how to do. Now my focus is on leveraging that talent as a developer and consultant to deliver creative and effective solutions to technology problems. To guide a company from idea to product launch by doing the research and choosing the best technology, people, and methods to fill their specific needs and goals.
 
 #Objective
 Technical generalist with a vast range of experience in electrical, communication, electromechanical, automation, and computing technologies. I started my career with analog Audio/Visual equipment and CCTV systems and expanded to analog control and monitoring equipment when I served in the US Navy. After the Navy I expanded yet again into Direct Digital Controls and found a passion for programming. I have a deep understanding of writing applications that process sensor data and generate actuator signals.
 
-#Summary of skills
-* Linux
-* MacOS
+#Profile Summary (max 40 chars)
+I have a vast range of experience in communication, mechatronic, automation, and computing technologies that would be valuable for the Digital Payloads Systems Engineer position. I want to apply my unique experience to find innovative solutions for your team.
 
-#Professional Experience
+#Skills
+* C (Programming Language)
+* C++
+* Qt
+* Software Development
+* Embedded Systems
+
+#Professional Work Experience
 [Millennium Space Systems](./resume/src/job_descriptions/millennium.md)
 
 [Manley Laboratories](./resume/src/job_descriptions/manley.md)
