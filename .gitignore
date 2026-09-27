@@ -3,3 +3,5 @@ project*
 Samples
 *.pdf
 *#
+build
+secrets.adoc
