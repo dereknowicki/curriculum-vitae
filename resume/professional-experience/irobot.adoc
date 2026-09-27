@@ -1,0 +1,11 @@
+* Designed and conducted experiments with Roomba Robots
+
+* Simultaneous Location And Mapping algorithm analysis
+
+* Wrote detailed research documents on experiments using the IMRAD scientific document organizational structure
+
+* Wrote hardware testing automation scripts in Python to be used on in-house, custom-built, product testing hardware
+
+* Wrote detailed tutorials for manual testing and calibration for both production and testing hardware
+
+* Data analysis with Python, Octave and Matplotlib

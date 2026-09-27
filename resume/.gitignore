@@ -1,0 +1,8 @@
+*~
+project*
+Samples
+*.pdf
+*#
+build
+.DS_Store
+secrets.adoc

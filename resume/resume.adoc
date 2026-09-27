@@ -1,0 +1,45 @@
+include::attributes.adoc[]
+ifdef::secrets[]
+include::{secrets}[]
+endif::[]
+
+:position: embedded_systems_engineer
+
+// email attribute included here if set in cli
+= Derek Nowicki =
+ifdef::addr[{addr}]
+ifdef::phone[{phone}]
+
+include::summary.adoc[tag={position}]
+
+== Professional Experience ==
+
+=== Spacecraft Software Engineer ===
+Millenium Space Systems | El Segundo, CA
+
+include::professional-experience/milleniumspace.adoc[]
+
+=== Embedded Software Engineer ===
+Manley Laboratories | Chino, CA
+
+include::professional-experience/manleylabs.adoc[]
+
+=== Tech Tutor ===
+Youth Policy Institute | Hollywood, CA
+
+include::professional-experience/ypi.adoc[]
+
+=== Intern ===
+iRobot | Pasadena, CA
+
+include::professional-experience/irobot.adoc[]
+
+=== Systems Specialist ===
+Climatec | Irvine, CA
+
+include::professional-experience/climatec.adoc[]
+
+=== Interior Communications Electrician ===
+US Navy | Norfolk, VA
+
+include::professional-experience/usnavy.adoc[]
